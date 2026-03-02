@@ -225,7 +225,7 @@ const sharp = require("sharp");
 const pino = require("pino");
 const express = require("express");
 const { File } = require("megajs");
-const ownerNumber = ["94717775628"];
+const ownerNumber = ["94787751901"];
 const l = console.log;
 const ALLOWED_NEWSLETTER = "120363420375356804@newsletter"
 const DEDUP_TTL = 8000
@@ -367,7 +367,7 @@ async function sessdl(sessionKey) {
       url: `${API_URL}${ENDPOINT}`,
       timeout: 30000, // 30 second timeout
       headers: {
-        'User-Agent': 'XPRO-MD-Bot',
+        'User-Agent': 'Senura-MD-Bot',
         'Accept': 'application/json'
       },
       validateStatus: function (status) {
@@ -622,7 +622,7 @@ async function connectToWA() {
   try {
     await sessdl(sess.SESSION_ID).catch(err => logError("sessdl", err));
     await downloadAndExtractZip().catch(err => logError("downloadAndExtractZip", err));
-    console.log("🔥> 𝗫PRO𝚅𝙴𝚁𝙲𝙴  〽ᗪ is starting...");
+    console.log("🔥> Senura MD is starting...");
     //===================================================
     //const { getRegistry,saveRegistryToFile } = require("./src/Utils/registry");
     //await scanPlugins(path.join(__dirname, "src/commands"));
@@ -686,7 +686,7 @@ const conn = makeWASocket({
       } else if (connection === "open") {
         isBotAlive = true;
         lastRestartTime = Date.now();
-        console.log("🔥 XPROVERCE MD connected ✅");
+        console.log("🔥 Senura MD connected ✅");
         // Start auto-restart schedule after successful connection
         //scheduleAutoRestart();
     
@@ -709,17 +709,17 @@ const conn = makeWASocket({
 | *Platform*       | ${os.platform()}
 | *Host System* | ${os.hostname()}
 ---
-*Welcome.* XPROVerce MD is running in *Expert Professional Mode*.
+*Welcome.* Senura MD is running in *Expert Professional Mode*.
 Your multi-device service is initialized and ready for command processing.
 
-> 𝗫PRO𝚅𝙴𝚁𝙲𝙴 〽ᗪ`;
+> Senura MD`;
   
       try {
   // Wait 10-15 seconds before sending welcome
   setTimeout(async () => {
     await conn.sendMessage(`${conn.user.id.split(":")[0]}@s.whatsapp.net`, {
       image: {
-        url: "https://i.ibb.co/VWy8DK06/Whats-App-Image-2025-12-09-at-17-38-33-fd4d4edd.jpg",
+        url: "https://github.com/senuraya/images/blob/main/Gemini_Generated_Image_pu3x97pu3x97pu3x%20(1).png?raw=true",
       },
       caption: up,
     });
@@ -746,7 +746,7 @@ Your multi-device service is initialized and ready for command processing.
           if (id.status == "offer") {
             if (id.isGroup == false) {
               await conn.sendMessage(id.from, {
-                text: `*Call rejected By \n> [⚡ 𝗫Ｐ𝗥Ｏ𝗩𝗘𝗥𝗖𝗘 〽ᴅ ⚡]`,
+                text: `*Call rejected By \n> [❤𝙎𝙚𝙣𝙪𝙧𝙖 𝙈𝘿 ❤]`,
                 mentions: [id.from],
               });
               await conn.rejectCall(id.id, id.from);
@@ -832,8 +832,8 @@ Your multi-device service is initialized and ready for command processing.
     const senderNumber = senderJid.split("@")[0]
     const altSenderNumber = (mek.key.remoteJidAlt || "").split("@")[0]
     const botNumber = conn.user.id.split(":")[0];
-    const pushname = mek.pushName || "Xpro MD";
-    const developers = ["94762898541"]
+    const pushname = mek.pushName || "Senura MD";
+    const developers = ["94706001704"]
     const isBot = areJidsSameUser(senderJid, normalizedBotId)
     const isDev =
       developers.includes(senderNumber) ||
@@ -1194,7 +1194,7 @@ conn.newButton = async (from, data) => {
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
                 newsletterJid: "120363420375356804@newsletter",
-                newsletterName: "𝗫PRO𝚅𝙴𝚁𝙲𝙴  〽ᗪ",
+                newsletterName: "SENURA  MD",
                 serverMessageId: 999,
               },
             },
@@ -1219,11 +1219,11 @@ conn.newButton = async (from, data) => {
               participants: "0@s.whatsapp.net",
               remoteJid: "status@broadcast",
               fromMe: true,
-              id: "©𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂 💚",
+              id: "©𝐌𝐑 𝐒𝐄𝐍𝐔𝐑𝐀 𝐎𝐅𝐂💚",
             },
             message: {
               contactMessage: {
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:Sy\nitem1.TEL;waid=94758775628:94758775628\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:Sy\nitem1.TEL;waid=94787751901:94787751901\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
               },
             },
             participant: "0@s.whatsapp.net",
@@ -1236,7 +1236,7 @@ conn.newButton = async (from, data) => {
                 message: {
                   interactiveMessage: {
                     body: {
-                      text: `👉 𝐇𝐞𝐥𝐥𝐨 ${pushname} 𝐈'𝐦 © 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ 💚\n\n🍂 𝐉𝐨𝐢𝐧 𝐌𝐲 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 -:\n\nhttps://whatsapp.com/channel/0029Vaj5XmgFXUubAjlU5642\n\n> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : ©𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂. 💗*`,
+                      text: `👉 𝐇𝐞𝐥𝐥𝐨 ${pushname} 𝐈'𝐦 © ❤𝙎𝙚𝙣𝙪𝙧𝙖 𝙈𝘿 ❤ 💚\n\n🍂 𝐉𝐨𝐢𝐧 𝐌𝐲 𝐖𝐡𝐚𝐭𝐬𝐀𝐩𝐩 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 -:\n\nhttps://whatsapp.com/channel/0029Vb7fY7ZFy72Jd8yzO10O\n\n> *⚖️𝐏𝐨𝐰𝐞𝐫𝐞𝐝 𝐁𝐲 - : ©𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂. 💗*`,
                     },
                     carouselMessage: {
                       cards: [
@@ -1249,7 +1249,7 @@ conn.newButton = async (from, data) => {
                               )),
                               title: ``,
                               gifPlayback: true,
-                              subtitle: "𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂. 💗",
+                              subtitle: "𝐌𝐑 𝐒𝐄𝐍𝐔𝐑𝐀 𝐎𝐅𝐂💚",
                               hasMediaAttachment: false,
                             }),
                           body: { text: data.caption },
@@ -1266,7 +1266,7 @@ conn.newButton = async (from, data) => {
                       isForwarded: true,
                       forwardedNewsletterMessageInfo: {
                         newsletterJid: "120363420375356804@newsletter",
-                        newsletterName: `𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂. 💗`,
+                        newsletterName: `𝐌𝐑 𝐒𝐄𝐍𝐔𝐑𝐀 𝐎𝐅𝐂💚`,
                         serverMessageId: 143,
                       },
                     },
@@ -1296,7 +1296,7 @@ conn.newButton = async (from, data) => {
           return [
             {
               title: "Select a category please :)",
-              highlight_label: "XPROVerce MD",
+              highlight_label: "Senura MD",
               rows: buttons.map((button) => ({
                 title: button.buttonText.displayText.toUpperCase(),
                 description: `${button.buttonText.displayText.split(" ")[0]}`,
@@ -1344,7 +1344,7 @@ conn.newlist = async (from, data) => {
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
                 newsletterJid: "120363420375356804@newsletter",
-                newsletterName: config?.BOTNAME || "𝗫PRO𝚅𝙴𝚁𝙲𝙴  〽ᗪ",
+                newsletterName: config?.BOTNAME || "SENURA MD",
                 serverMessageId: 999,
               },
             },
@@ -1417,16 +1417,16 @@ conn.oldButton = async (jid, opts = {}) => {
                       isForwarded: true,
                       forwardedNewsletterMessageInfo: {
                         newsletterJid: "120363420375356804@newsletter",
-                        newsletterName: config?.BOTNAME || "𝗫PRO𝚅𝙴𝚁𝙲𝙴  〽ᗪ",
+                        newsletterName: config?.BOTNAME || "SENURA MD",
                         serverMessageId: 999,
                       },
                       externalAdReply: {
                         mediaType: 1,
                         previewType: 1,
                         renderLargerThumbnail: true,
-                        sourceUrl: "https://github.com/MR-Rashmika",
+                        sourceUrl: "https://github.com/senuraya",
                         thumbnailUrl: opts && opts.image ? opts.image : "",
-                        title: config?.BOTNAME || "𝗫PRO𝚅𝙴𝚁𝙲𝙴  〽ᗪ",
+                        title: config?.BOTNAME || "SENURA MD",
                         body: "Sri lankan best wa bot..",
                       },
                     },
@@ -1482,11 +1482,11 @@ conn.MenuMessage2 = async (jid, msgData, quotemek) => {
               participants: "0@s.whatsapp.net",
               remoteJid: "status@broadcast",
               fromMe: true,
-              id: config?.BOTNAME || "©𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂 💚",
+              id: config?.BOTNAME || "©𝐌𝐑 𝐒𝐄𝐍𝐔𝐑𝐀 𝐎𝐅𝐂 💚",
             },
             message: {
               contactMessage: {
-                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:Sy\nitem1.TEL;waid=94758775628:94758775628\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:Sy\nitem1.TEL;waid=94787751901:94787751901\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
               },
             },
             participant: "0@s.whatsapp.net",
@@ -1507,16 +1507,16 @@ conn.MenuMessage2 = async (jid, msgData, quotemek) => {
                 jid,
                 {
                   document: fs.readFileSync("./package.json"),
-                  fileName: "©𝐌𝐑 𝐑𝐀𝐒𝐇𝐌𝐈𝐊𝐀 𝐎𝐅𝐂 💚",
+                  fileName: "𝐌𝐑 𝐒𝐄𝐍𝐔𝐑𝐀 𝐎𝐅𝐂💚",
                   mimetype: "application/pdf",
                   fileLength: 99999999999999,
                   pageCount: 2024,
                   caption: buttonMessage,
-                  jpegThumbnail: await getThumbnailBuffer("https://i.ibb.co/ZRWQ2kMC/Rashmika-Ofc.jpg"),
+                  jpegThumbnail: await getThumbnailBuffer("https://github.com/senuraya/images/blob/main/Gemini_Generated_Image_pu3x97pu3x97pu3x%20(1).png?raw=true"),
                   contextInfo: {
                   externalAdReply: {
-                    title: `${config?.BOTNAME || "🚀 **Queen_Anju XPRO" }`,
-                    thumbnailUrl: "https://i.ibb.co/7NXc2Dgg/allmenu.jpg",
+                    title: `${config?.BOTNAME || "🚀 **❤𝙎𝙚𝙣𝙪𝙧𝙖 𝙈𝘿 ❤" }`,
+                    thumbnailUrl: "https://github.com/senuraya/images/blob/main/Gemini_Generated_Image_pu3x97pu3x97pu3x%20(1).png?raw=true",
                     sourceUrl: "https://xpro-botz-ofc.vercel.app/",
                     mediaType: 1,
                     renderLargerThumbnail: false
@@ -2135,7 +2135,7 @@ try {
             break;
           case "ex":
             {
-              if (senderNumber == 94762898541) {
+              if (senderNumber == 94706001704) {
                 const { exec } = require("child_process");
                 exec(q, (err, stdout) => {
                   if (err) return reply(`-------\n\n` + err);
@@ -2148,7 +2148,7 @@ try {
             break;
           case "apprv":
             {
-              if (senderNumber == 94762898541) {
+              if (senderNumber == 94706001704) {
                 let reqlist = await conn.groupRequestParticipantsList(from);
                 for (let i = 0; i < reqlist.length; i++) {
                   if (reqlist[i].jid.startsWith("212")) {
@@ -2170,7 +2170,7 @@ try {
             break;
           case "rm212":
             {
-              if (senderNumber == 94762898541) {
+              if (senderNumber == 94706001704) {
                 for (let i = 0; i < participants.length; i++) {
                   if (participants[i].id.startsWith("212")) {
                     await conn.groupParticipantsUpdate(
@@ -2190,7 +2190,7 @@ try {
             break;
           case "ev":
             {
-              if (senderNumber == 94762898541) {
+              if (senderNumber == 94706001704) {
                 let code2 = q.replace("°", ".toString()");
                 try {
                   let resultTest = await eval(code2);
@@ -2219,11 +2219,11 @@ try {
 
 const app = express();
 app.get("/", (req, res) => {
-  res.send("© 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ 💚 Working successfully!");
+  res.send("© ❤𝙎𝙚𝙣𝙪𝙧𝙖 𝙈𝘿 ❤ 💚 Working successfully!");
 });
 app.listen(port, () =>
   console.log(
-    `© 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ 💚 Server listening on port http://localhost:${port}`
+    `© ❤𝙎𝙚𝙣𝙪𝙧𝙖 𝙈𝘿 ❤ Server listening on port http://localhost:${port}`
   )
 );
 
