@@ -1,13 +1,14 @@
 {
-  "name": "queen_anju",
-  "version": "5.0.0",
-  "description": "A Simple WhatsApp bot created By King-Rashmika",
+  "name": "senura-md",
+  "version": "1.0.0",
+  "description": "SENURA-MD Multi-functional WhatsApp Bot",
   "main": "start.js",
   "scripts": {
-    "start": "pm2 start queen.js --deep-monitoring --attach --name Queen_Anju",
-    "stop": "pm2 stop Queen_Anju",
-    "restart": "pm2 restart Queen_Anju"
+    "start": "pm2 start queen.js --deep-monitoring --attach --name SENURA MD",
+    "stop": "pm2 stop SENURA MD",
+    "restart": "pm2 restart SENURA MD"
   },
+
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
